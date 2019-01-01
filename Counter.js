@@ -1,5 +1,6 @@
 /*eslint-disable no-unused-vars */
 import React, { Component, PropTypes } from 'react';
+import { number, func } from 'prop-types';
 
 const Counter = ({ value, onIncrement, onDecrement, onIncrementAsync }) => (
   <div>
@@ -22,9 +23,9 @@ const Counter = ({ value, onIncrement, onDecrement, onIncrementAsync }) => (
 );
 
 Counter.propTypes = {
-  value: PropTypes.number.isRequired,
-  onIncrement: PropTypes.func.isRequired,
-  onDecrement: PropTypes.func.isRequired,
+  value: number.isRequired,
+  onIncrement: func.isRequired,
+  onDecrement: func.isRequired,
 }
 
 export default Counter;
